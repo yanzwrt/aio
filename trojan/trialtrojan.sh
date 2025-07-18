@@ -58,7 +58,7 @@ CITY=$(cat /usr/local/etc/xray/city)
 systemctl restart xray
 clear
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
-echo -e "                Trial Trojan Account                " | tee -a /user/log-trojan-$user.txt
+echo -e "                Uji Coba Akun Trojan                " | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Remarks       : ${user}" | tee -a /user/log-trojan-$user.txt
 echo -e "ISP           : $ISP" | tee -a /user/log-trojan-$user.txt
@@ -84,11 +84,11 @@ echo -e "Link gRPC     : ${trojanlink3}" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Format Clash  : http://$domain:8000/trojan/trojan-$user.txt" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
-echo -e "Expired On    : $exp" | tee -a /user/log-trojan-$user.txt
+echo -e "Berlaku s/d   : $exp" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear
 trojan

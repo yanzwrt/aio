@@ -23,7 +23,7 @@ clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "                  ${WB}Hapus Akun Vmess${NC}                  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}Pengguna Kadaluwarsa${NC}  "
+echo -e " ${YB}Daftar Pengguna & Tanggal Berakhir${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 grep -E "^#@ " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""

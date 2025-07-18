@@ -69,11 +69,11 @@ grpc-service-name: "trojan-grpc"
 ==========================
 Link Trojan Account
 ==========================
-Link TLS  : trojan://$uuid@$domain:443?path=/trojan&security=tls&host=$domain&type=ws&sni=$domain#$user
+Link TLS  : trojan://$user@$domain:443?path=/trojan&security=tls&host=$domain&type=ws&sni=$domain#$user
 ==========================
-Link NTLS : trojan://${uuid}@$domain:80?path=/trojan&security=none&host=$domain&type=ws#$user
+Link NTLS : trojan://${user}@$domain:80?path=/trojan&security=none&host=$domain&type=ws#$user
 ==========================
-Link gRPC : trojan://${uuid}@$domain:443?security=tls&encryption=none&type=grpc&serviceName=trojan-grpc&sni=$domain#$user
+Link gRPC : trojan://${user}@$domain:443?security=tls&encryption=none&type=grpc&serviceName=trojan-grpc&sni=$domain#$user
 ==========================
 END
 ISP=$(cat /usr/local/etc/xray/org)

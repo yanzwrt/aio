@@ -13,13 +13,13 @@ read -rp "Domain/Host: " -e host
 if [ -z $host ]; then
 echo -e "${YB}????${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 dns
 else
 echo "DNS=$host" > /var/lib/dnsvps.conf
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "${YB}Dont Forget To Renew Cert${NC}"
+echo -e "${YB}Jangan Lupa Perbarui Sertifikat${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 menu
 fi

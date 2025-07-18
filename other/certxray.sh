@@ -35,5 +35,5 @@ systemctl restart nginx
 echo -e "${GB}[ INFO ]${NC} ${YB}All finished...${NC} "
 sleep 0.5
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 menu

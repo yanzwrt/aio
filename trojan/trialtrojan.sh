@@ -84,7 +84,7 @@ echo -e "Link gRPC     : ${trojanlink3}" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Format Clash  : http://$domain:8000/trojan/trojan-$user.txt" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
-echo -e "Berlaku s/d   : $exp" | tee -a /user/log-trojan-$user.txt
+echo -e "Berakhir Pada : $exp" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt

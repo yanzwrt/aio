@@ -9,22 +9,22 @@ CB='\e[35;1m'
 WB='\e[37;1m'
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}Log Create User${NC}                   "
+echo -e "         ${WB}Catatan Membuat Akun Pengguna${NC}              "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e ""
-echo -e " ${MB}[1]${NC} ${YB}Log Vmess Account${NC} "
-echo -e " ${MB}[2]${NC} ${YB}Log Vless Account${NC} "
-echo -e " ${MB}[3]${NC} ${YB}Log Trojan Account${NC} "
-echo -e " ${MB}[4]${NC} ${YB}Log Shadowsocks Account${NC}"
-echo -e " ${MB}[5]${NC} ${YB}Log Shadowsocks 2022 Account${NC}"
-echo -e " ${MB}[6]${NC} ${YB}Log Socks5 Account${NC}"
-echo -e " ${MB}[7]${NC} ${YB}Log All Xray Account${NC}"
+echo -e " ${MB}[1]${NC} ${YB}Catatan Akun Vmess${NC} "
+echo -e " ${MB}[2]${NC} ${YB}Catatan Akun Vless ${NC} "
+echo -e " ${MB}[3]${NC} ${YB}Catatan Akun Trojan ${NC} "
+echo -e " ${MB}[4]${NC} ${YB}Catatan Akun Shadowsocks ${NC}"
+echo -e " ${MB}[5]${NC} ${YB}Catatan Akun Shadowsocks 2022 ${NC}"
+echo -e " ${MB}[6]${NC} ${YB}Catatan Akun Socks5 ${NC}"
+echo -e " ${MB}[7]${NC} ${YB}Catatan Akun All Xray ${NC}"
 echo -e ""
-echo -e " ${MB}[0]${NC} ${YB}Back To Menu${NC}"
+echo -e " ${MB}[0]${NC} ${YB}Kembali Ke Menu${NC}"
 echo -e ""
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e ""
-read -p " Select menu :  "  opt
+read -p " pilih menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; log-vmess ; exit ;;

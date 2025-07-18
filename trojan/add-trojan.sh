@@ -11,18 +11,18 @@ clear
 domain=$(cat /usr/local/etc/xray/domain)
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}Tambah Akun Trojan${NC}                "
+echo -e "               ${WB}Buat Akun Trojan Baru${NC}                "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 read -rp "Password : " -e user
 user_EXISTS=$(grep -w $user /usr/local/etc/xray/config.json | wc -l)
 if [[ ${user_EXISTS} == '1' ]]; then
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}Tambah Akun Trojan${NC}                "
+echo -e "               ${WB}Buat Akun Trojan Baru${NC}                "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "${YB}pengguna dengan nama yang ditentukan sudah dibuat, silakan pilih nama lain.${NC}"
+echo -e "${YB}Nama pengguna sudah terdaftar, silakan pilih nama lain.${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
+read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
 add-trojan
 fi
 done
@@ -81,7 +81,7 @@ CITY=$(cat /usr/local/etc/xray/city)
 systemctl restart xray
 clear
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
-echo -e "                     Akun Trojan                    " | tee -a /user/log-trojan-$user.txt
+echo -e "             Informasi Akun Trojan                  " | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Remarks       : ${user}" | tee -a /user/log-trojan-$user.txt
 echo -e "ISP           : $ISP" | tee -a /user/log-trojan-$user.txt
@@ -99,8 +99,9 @@ echo -e "Path          : /trojan" | tee -a /user/log-trojan-$user.txt
 echo -e "ServiceName   : trojan-grpc" | tee -a /user/log-trojan-$user.txt
 echo -e "Alpn          : h2, http/1.1" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
-echo -e "Berakhir s/d  : $exp" | tee -a /user/log-trojan-$user.txt
+echo -e "Berakhir Pada : $exp" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
+echo -e "————————————————————RAKHA-VPN———————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Link TLS      : ${trojanlink1}" | tee -a /user/log-trojan-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-trojan-$user.txt
 echo -e "Link NTLS     : ${trojanlink2}" | tee -a /user/log-trojan-$user.txt
@@ -112,6 +113,6 @@ echo -e "———————————————————————�
 echo " " | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
 echo " " | tee -a /user/log-trojan-$user.txt
-read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
+read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
 clear
 trojan

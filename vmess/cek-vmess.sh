@@ -11,7 +11,7 @@ clear
 echo -n >/tmp/other.txt
 data=($(cat /usr/local/etc/xray/config.json | grep '^#@' | cut -d ' ' -f 2 | sort | uniq))
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "              ${WB}Vmess User Login Account${NC}              "
+echo -e "          ${WB}Daftar Pengguna Vmess yang Login${NC}          "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 for akun in "${data[@]}"; do
 if [[ -z "$akun" ]]; then
@@ -42,5 +42,5 @@ rm -rf /tmp/ipvmess.txt
 done
 rm -rf /tmp/other.txt
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
 vmess

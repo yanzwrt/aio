@@ -112,8 +112,9 @@ echo -e "${WB}🔗 Link NTLS     :${NC} $trojanlink2" | tee -a /user/log-trojan-
 echo -e "${WB}🔗 Link gRPC     :${NC} $trojanlink3" | tee -a /user/log-trojan-$user.txt
 echo -e "${WB}📄 Format Clash  :${NC} http://$domain:8000/trojan/trojan-$user.txt" | tee -a /user/log-trojan-$user.txt
 echo -e "${CB}══════════════════════════════════════════════════════${NC}" | tee -a /user/log-trojan-$user.txt
-
-echo ""
+echo " " | tee -a /user/log-trojan-$user.txt
+echo " " | tee -a /user/log-trojan-$user.txt
+echo " " | tee -a /user/log-trojan-$user.txt
 read -n 1 -s -r -p "✅ Tekan tombol apa saja untuk kembali ke menu..."
 clear
 trojan

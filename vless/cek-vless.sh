@@ -42,5 +42,5 @@ rm -rf /tmp/ipvmess.txt
 done
 rm -rf /tmp/other.txt
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 vless

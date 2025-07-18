@@ -11,25 +11,25 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#= " "/usr/local/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Extend Vless Account${NC}          "
+echo -e "                ${WB}Perpanjang Akun Vless${NC}          "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "  ${YB}You have no existing clients!${NC}"
+echo -e "  ${YB}Belum ada pengguna yang terdaftar!${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 vless
 fi
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Extend Vless Account${NC}          "
+echo -e "                ${WB}Perpanjang Akun Vless${NC}          "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}User  Expired${NC}  "
+echo -e " ${YB}Daftar Pengguna & Tanggal Berakhir${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 grep -E "^#= " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
-echo -e "${YB}tap enter to go back${NC}"
+echo -e "${YB}Tekan Enter untuk kembali ke menu${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -rp "Input Username : " user
+read -rp "Masukan Nama Pengguna : " user
 if [ -z $user ]; then
 vless
 else
@@ -45,13 +45,13 @@ sed -i "/#= $user/c\#= $user $exp4" /usr/local/etc/xray/config.json
 systemctl restart xray
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "           ${WB}Vless Account Success Extended${NC}           "
+echo -e "           ${WB}Akun Vless Berhasil Diperpanjang${NC}           "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}Client Name :${NC} $user"
-echo -e " ${YB}Expired On  :${NC} $exp4"
+echo -e " ${YB}Nama Pengguna   :${NC} $user"
+echo -e " ${YB}Berlaku Sampai  :${NC} $exp4"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear
 vless
 fi

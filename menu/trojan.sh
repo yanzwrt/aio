@@ -9,7 +9,7 @@ CB='\e[35;1m'
 WB='\e[37;1m'
 clear
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}----- [ Trojan Menu ] -----${NC}              "
+echo -e "               ${WB}----- [ Menu Trojan ] -----${NC}              "
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e ""
 echo -e " ${MB}[1]${NC} ${YB}Buat Akun Trojan${NC} "
@@ -22,7 +22,7 @@ echo -e " ${MB}[0]${NC} ${YB}Kembali Ke Menu${NC}"
 echo -e ""
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e ""
-read -p " Select menu :  "  opt
+read -p " Pilih menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; add-trojan ; exit ;;

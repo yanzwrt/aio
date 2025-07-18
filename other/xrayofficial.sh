@@ -8,14 +8,14 @@ MB='\e[35;1m'
 CB='\e[35;1m'
 WB='\e[37;1m'
 echo ""
-echo -e "${GB}[ INFO ]${NC} ${YB}Change Xray-core Official${NC}"
+echo -e "${GB}[ INFO ]${NC} ${YB}Ubah Xray-core Resmi${NC}"
 rm -rf /usr/local/bin/xray
 cp /backup/xray.official.backup /usr/local/bin/xray
 chmod 755 /usr/local/bin/xray
 systemctl restart xray
 sleep 1
-echo -e "${GB}[ INFO ]${NC} ${YB}Change Xray-core Official done${NC}"
+echo -e "${GB}[ INFO ]${NC} ${YB}Ubah Xray-core resmi berhasil${NC}"
 echo ""
-echo -e "${YB}Back to menu in 1 sec${NC} "
+echo -e "${YB}Kembali ke menu dalam 1 detik${NC} "
 sleep 1
 menu

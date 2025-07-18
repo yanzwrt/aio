@@ -22,7 +22,7 @@ echo -e "                  Buat Akun Vless Baru                        "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "${YB}Nama pengguna sudah terdaftar, silakan pilih nama lain.${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 add-vless
 fi
 done
@@ -133,6 +133,6 @@ echo -e "${BB}——————————————————————
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
-read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear
 vless

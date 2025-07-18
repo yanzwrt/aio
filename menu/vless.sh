@@ -9,20 +9,20 @@ CB='\e[35;1m'
 WB='\e[37;1m'
 clear
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}----- [ Vless Menu ] -----${NC}               "
+echo -e "               ${WB}----- [ Menu Vless ] -----${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e ""
-echo -e " ${MB}[1]${NC} ${YB}Create Account Vless${NC} "
-echo -e " ${MB}[2]${NC} ${YB}Trial Account Vless${NC} "
-echo -e " ${MB}[3]${NC} ${YB}Extend Account Vless${NC} "
-echo -e " ${MB}[4]${NC} ${YB}Delete Account Vless${NC} "
-echo -e " ${MB}[5]${NC} ${YB}Check User Login${NC} "
+echo -e " ${MB}[1]${NC} ${YB}Buat Akun Vless${NC} "
+echo -e " ${MB}[2]${NC} ${YB}Uji Coba Akun Vless${NC} "
+echo -e " ${MB}[3]${NC} ${YB}Perpanjang Akun Vless${NC} "
+echo -e " ${MB}[4]${NC} ${YB}Hapus Akun Vless${NC} "
+echo -e " ${MB}[5]${NC} ${YB}Cek Pengguna Login${NC} "
 echo -e ""
-echo -e " ${MB}[0]${NC} ${YB}Back To Menu${NC}"
+echo -e " ${MB}[0]${NC} ${YB}Kembali Ke Menu${NC}"
 echo -e ""
 echo -e "${BB}———————————————————————————————————————————————————————${NC}"
 echo -e ""
-read -p " Select menu :  "  opt
+read -p " pilih menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; add-vless ; exit ;;
@@ -32,5 +32,5 @@ case $opt in
 5) clear ; cek-vless ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo -e "salah tekan " ; sleep 1 ; vless ;;
+*) echo -e "salah tekan bree " ; sleep 1 ; vless ;;
 esac

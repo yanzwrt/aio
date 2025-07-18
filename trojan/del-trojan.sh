@@ -12,24 +12,24 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/usr/local/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Delete Trojan Account${NC}               "
+echo -e "                 ${WB}Hapus Akun Trojan${NC}                  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "  ${YB}You have no existing clients!${NC}"
+echo -e "  ${YB}Anda tidak memiliki pengguna yang ada!${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 trojan
 fi
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Delete Trojan Account${NC}               "
+echo -e "                ${WB}Hapus Akun Trojan${NC}                   "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}User  Expired${NC}  "
+echo -e " ${YB}Pengguna Kadaluwarsa${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 grep -E "^#& " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
-echo -e "${YB}tap enter to go back${NC}"
+echo -e "${YB}ketuk enter untuk kembali${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -rp "Input Username : " user
+read -rp "Masukan Nama Pengguna : " user
 if [ -z $user ]; then
 trojan
 else
@@ -40,13 +40,13 @@ rm -rf /user/log-trojan-$user.txt
 systemctl restart xray
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "           ${WB}Trojan Account Success Deleted${NC}           "
+echo -e "           ${WB}Akun Trojan Berhasil Dihapus${NC}             "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Client Name :${NC} $user"
 echo -e " ${YB}Expired On  :${NC} $exp"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear
 trojan
 fi

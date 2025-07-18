@@ -11,7 +11,7 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#@ " "/usr/local/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Perpanjang Akun Vless${NC}               "
+echo -e "                ${WB}Perpanjang Akun Vmess${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "  ${YB}Belum ada pengguna yang terdaftar!${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
@@ -21,7 +21,7 @@ vmess
 fi
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                ${WB}Perpanjang Akun Vless${NC}               "
+echo -e "                ${WB}Perpanjang Akun Vmess${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Daftar Pengguna & Tanggal Berakhir${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"

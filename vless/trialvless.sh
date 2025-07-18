@@ -78,7 +78,7 @@ CITY=$(cat /usr/local/etc/xray/city)
 systemctl restart xray
 clear
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-vless-$user.txt
-echo -e "                 Trial Vless Account                " | tee -a /user/log-vless-$user.txt
+echo -e "                 Uji Coba Akun Vless                " | tee -a /user/log-vless-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-vless-$user.txt
 echo -e "Remarks       : ${user}" | tee -a /user/log-vless-$user.txt
 echo -e "Domain        : ${domain}" | tee -a /user/log-vless-$user.txt
@@ -105,11 +105,11 @@ echo -e "Link gRPC     : ${vlesslink3}" | tee -a /user/log-vless-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-vless-$user.txt
 echo -e "Format Clash  : http://$domain:8000/vless/vless-$user.txt" | tee -a /user/log-vless-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-vless-$user.txt
-echo -e "Expired On    : $exp" | tee -a /user/log-vless-$user.txt
+echo -e "Berlaku Pada  : $exp" | tee -a /user/log-vless-$user.txt
 echo -e "————————————————————————————————————————————————————" | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear
 vless

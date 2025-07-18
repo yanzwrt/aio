@@ -13,7 +13,7 @@ if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "               ${WB}Perpanjang Akun Trojan${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "  ${YB}Anda tidak memiliki pengguna yang ada!${NC}"
+echo -e "  ${YB}Belum ada pengguna yang terdaftar!${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
@@ -23,11 +23,11 @@ clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "                ${WB}Perpanjang Akun Trojan${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}Pengguna Kadaluwarsa${NC}  "
+echo -e " ${YB}Daftar Pengguna & Tanggal Berakhir${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 grep -E "^#& " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
-echo -e "${YB}ketuk enter untuk kembali${NC}"
+echo -e "${YB}Tekan Enter untuk kembali ke menu${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 read -rp "Masukan Nama Pengguna : " user
 if [ -z $user ]; then
@@ -45,11 +45,11 @@ sed -i "/#& $user/c\#& $user $exp4" /usr/local/etc/xray/config.json
 systemctl restart xray
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "           ${WB}Perpanjang Akun Trojan Berhasil${NC}          "
+echo -e "         ${WB}Akun Trojan Berhasil Diperpanjang${NC}          "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Nama Pengguna   :${NC} $user"
 echo -e " ${YB}Berlaku Sampai  :${NC} $exp4"
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}—————————————————————RAKHA-VPN——————————————————————${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear

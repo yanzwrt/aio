@@ -40,7 +40,7 @@ rm -rf /user/log-vmess-$user.txt
 systemctl restart xray
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "           ${WB}Akun Vless Berhasil Dihapus${NC}            "
+echo -e "           ${WB}Akun Vmess Berhasil Dihapus${NC}            "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Nama Pengguna   :${NC} $user"
 echo -e " ${YB}Berlaku Sampai  :${NC} $exp"

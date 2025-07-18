@@ -33,8 +33,7 @@ DATE=$(date -R | cut -d " " -f -4)
 MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}----- [ Xray Script ] -----${NC}
-echo -e "           ${WB}----- [ RAKHA PUTRA ANDRIAN ] -----${NC}              "
+echo -e "               ${WB}----- [ Xray Script ] -----${NC}             "
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Public IP${NC}        ${WB}: $MYIP"
 echo -e " ${YB}Service Provider${NC} ${WB}: $ISP"
@@ -69,7 +68,7 @@ echo -e " ${MB}[11]${NC} ${YB}Renew Cert${NC}         ${MB}[16]${NC} ${YB}Change
 echo -e " ${MB}[12]${NC} ${YB}About Script${NC}       ${MB}[17]${NC} ${YB}Reboot VPS${NC}"
 echo -e ""
 echo -e " ${MB}[x]${NC} ${YB}Exit Menu${NC}"
-echo -e "${BB}————————————————————RAKHA PUTRA ANDRIAN——————————————————${NC}"
+echo -e "${BB}————————————————————RAKHA-PUTRA-ANDRIAN——————————————————${NC}"
 echo -e ""
 read -p " Select Menu :  "  opt
 echo -e ""

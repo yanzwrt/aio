@@ -11,18 +11,18 @@ clear
 domain=$(cat /usr/local/etc/xray/domain)
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}Add Vless Account${NC}                 "
+echo -e "               ${WB}Buat Akun Vless Baru${NC}                 "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 read -rp "Password : " -e user
 CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/config.json | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  Add Vless Account                 "
+echo -e "                  Buat Akun Vless Baru                        "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "${YB}A client with the specified name was already created, please choose another name.${NC}"
+echo -e "${YB}Nama pengguna sudah terdaftar, silakan pilih nama lain.${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
 add-vless
 fi
 done
@@ -101,7 +101,7 @@ CITY=$(cat /usr/local/etc/xray/city)
 systemctl restart xray
 clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}" | tee -a /user/log-vless-$user.txt
-echo -e "                    Vless Account                   " | tee -a /user/log-vless-$user.txt
+echo -e "                    Informasi Akun Vless                      " | tee -a /user/log-vless-$user.txt
 echo -e "${BB}————————————————————————————————————————————————————${NC}" | tee -a /user/log-vless-$user.txt
 echo -e "Remarks       : ${user}" | tee -a /user/log-vless-$user.txt
 echo -e "Domain        : ${domain}" | tee -a /user/log-vless-$user.txt
@@ -120,7 +120,7 @@ echo -e "Path          : /vless" | tee -a /user/log-vless-$user.txt
 echo -e "ServiceName   : vless-grpc" | tee -a /user/log-vless-$user.txt
 echo -e "Alpn          : h2, http/1.1" | tee -a /user/log-vless-$user.txt
 echo -e "${BB}————————————————————————————————————————————————————${NC}" | tee -a /user/log-vless-$user.txt
-echo -e "Expired On    : $exp" | tee -a /user/log-vless-$user.txt
+echo -e "Berakhir Pada : $exp" | tee -a /user/log-vless-$user.txt
 echo -e "${BB}————————————————————————————————————————————————————${NC}" | tee -a /user/log-vless-$user.txt
 echo -e "Link TLS      : ${vlesslink1}" | tee -a /user/log-vless-$user.txt
 echo -e "${BB}————————————————————————————————————————————————————${NC}" | tee -a /user/log-vless-$user.txt
@@ -133,6 +133,6 @@ echo -e "${BB}——————————————————————
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
 echo " " | tee -a /user/log-vless-$user.txt
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan sembarang tombol untuk kembali ke menu"
 clear
 vless

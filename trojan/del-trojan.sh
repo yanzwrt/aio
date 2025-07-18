@@ -14,7 +14,7 @@ clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "                 ${WB}Hapus Akun Trojan${NC}                  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "  ${YB}Anda tidak memiliki pengguna yang ada!${NC}"
+echo -e "  ${YB}Belum ada pengguna yang terdaftar!${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 trojan
@@ -27,7 +27,7 @@ echo -e " ${YB}Pengguna Kadaluwarsa${NC}  "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 grep -E "^#& " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
-echo -e "${YB}ketuk enter untuk kembali${NC}"
+echo -e "${YB}Tekan Enter untuk kembali ke menu${NC}"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 read -rp "Masukan Nama Pengguna : " user
 if [ -z $user ]; then
@@ -42,8 +42,8 @@ clear
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo -e "           ${WB}Akun Trojan Berhasil Dihapus${NC}             "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}Client Name :${NC} $user"
-echo -e " ${YB}Expired On  :${NC} $exp"
+echo -e " ${YB}Nama Pengguna   :${NC} $user"
+echo -e " ${YB}Berlaku Sampai  :${NC} $exp"
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"

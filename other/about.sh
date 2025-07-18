@@ -28,5 +28,5 @@ echo -e "  ${YB}- HTTPS : 443, 2053, 2083, 2087, 2096, 8443${NC}"
 echo -e "  ${YB}- HTTP  : 80, 8080, 8880, 2052, 2082, 2086, 2095${NC}"
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 menu

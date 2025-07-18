@@ -27,7 +27,7 @@ echo -e " ${MB}[9]${NC} ${YB}Custom DNS${NC}"
 echo -e ""
 echo -e " ${MB}[10]${NC} ${YB}Back To Main Menu${NC}"
 echo ""
-read -p "Select From Options [ 1 - 9 ] : " dns
+read -p "Pilih Dari Opsi [ 1 - 9 ] : " dns
 echo -e ""
 case $dns in
 1) clear ;
@@ -174,5 +174,5 @@ echo "Custom DNS" > /user/current
 echo -e "${YB}Setup Completed${NC}"
 sleep 1.5 ; clear ; changer ;;
 10) clear ; menu ;;
-*) echo -e "${YB}Please enter an correct number${NC}" ; sleep 1 ; changer ;;
+*) echo -e "${YB}Silakan masukkan nomor yang benar${NC}" ; sleep 1 ; changer ;;
 esac

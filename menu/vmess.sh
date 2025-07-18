@@ -9,20 +9,20 @@ CB='\e[35;1m'
 WB='\e[37;1m'
 clear
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}----- [ Vmess Menu ] -----${NC}               "
+echo -e "               ${WB}----- [ Menu Vmess ] -----${NC}               "
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e ""
-echo -e " ${MB}[1]${NC} ${YB}Create Account Vmess${NC} "
-echo -e " ${MB}[2]${NC} ${YB}Trial Account Vmess${NC} "
-echo -e " ${MB}[3]${NC} ${YB}Extend Account Vmess${NC} "
-echo -e " ${MB}[4]${NC} ${YB}Delete Account Vmess${NC} "
-echo -e " ${MB}[5]${NC} ${YB}Check User Login${NC} "
+echo -e " ${MB}[1]${NC} ${YB}Buat Akun Vmess${NC} "
+echo -e " ${MB}[2]${NC} ${YB}Uji Coba Akun Vmess${NC} "
+echo -e " ${MB}[3]${NC} ${YB}Perpanjang Akun Vmess${NC} "
+echo -e " ${MB}[4]${NC} ${YB}Hapus Akun Vmess${NC} "
+echo -e " ${MB}[5]${NC} ${YB}Cek Pengguna Login${NC} "
 echo -e ""
-echo -e " ${MB}[0]${NC} ${YB}Back To Menu${NC}"
+echo -e " ${MB}[0]${NC} ${YB}Kembali Ke Menu${NC}"
 echo -e ""
 echo -e "${BB}———————————————————————————————————————————————————————${NC}"
 echo -e ""
-read -p " Select menu :  "  opt
+read -p " Pilih menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; add-vmess ; exit ;;

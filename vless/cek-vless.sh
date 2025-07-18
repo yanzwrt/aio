@@ -11,7 +11,7 @@ clear
 echo -n >/tmp/other.txt
 data=($(cat /usr/local/etc/xray/config.json | grep '^#=' | cut -d ' ' -f 2 | sort | uniq))
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "              ${WB}Vless User Login Account${NC}              "
+echo -e "         ${WB}Daftar Pengguna Vless yang Login${NC}           "
 echo -e "${BB}————————————————————————————————————————————————————${NC}"
 for akun in "${data[@]}"; do
 if [[ -z "$akun" ]]; then

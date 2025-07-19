@@ -13,11 +13,11 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 echo -e "              ${WB}★ Buat Akun Vmess Baru ★${NC}"
 echo -e "${BB}══════════════════════════════════════════════════════${NC}"
-read -rp "$(echo -e "${GB}➤ Masukkan Username / Password : ${NC}")" user
+read -rp "$(echo -e "${GB}➤ Masukkan Nama Pengguna / Password : ${NC}")" user
 CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/config.json | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "${RB}⚠️  Username '${user}' sudah terdaftar!${NC}"
+echo -e "${RB}⚠️  Pengguna '${user}' sudah terdaftar!${NC}"
 echo -e "${YB}Silakan coba dengan nama lain.${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk mencoba lagi..."

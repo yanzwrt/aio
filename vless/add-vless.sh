@@ -21,6 +21,7 @@ echo -e "${RB}⚠️  Username '${user}' sudah terdaftar!${NC}"
 echo -e "${YB}Silakan coba dengan nama lain.${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk mencoba lagi..."
+add-vmess
 fi
 done
 read -p "Expired (days): " masaaktif

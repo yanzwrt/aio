@@ -10,24 +10,24 @@ WB='\e[37;1m'
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#= " "/usr/local/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                  ${WB}Hapus Akun Vless${NC}                  "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+echo -e "              ${WB}★ Hapus Akun Vless ★${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 echo -e "  ${YB}Belum ada pengguna yang terdaftar!${NC}"
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 vless
 fi
 clear
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "                     Hapus Akun Vless                 "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+echo -e "               ${WB}★ Hapus Akun Vless ★${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 echo -e " ${YB}Pengguna Kadaluwarsa${NC}  "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 grep -E "^#= " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
 echo -e "${YB}Tekan Enter untuk kembali ke menu${NC}"
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 read -rp "Masukkan Nama Pengguna : " user
 if [ -z $user ]; then
 vless
@@ -38,12 +38,12 @@ rm -rf /var/www/html/vless/vless-$user.txt
 rm -rf /user/log-vless-$user.txt
 systemctl restart xray
 clear
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "             ${WB}Akun Vless Berhasil Dihapus${NC}            "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e " ${YB}Nama Pengguna   :${NC} $user"
-echo -e " ${YB}Berlaku Sampai  :${NC} $exp"
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+echo -e "         ${WB}★ Akun Vless Berhasil Dihapus ★${NC}"            "
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+echo -e " ${GB}Nama Pengguna   :${NC} $user"
+echo -e " ${GB}Berlaku Sampai  :${NC} $exp"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
 echo ""
 read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
 clear

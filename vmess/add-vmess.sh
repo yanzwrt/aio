@@ -10,19 +10,17 @@ WB='\e[37;1m'
 clear
 domain=$(cat /usr/local/etc/xray/domain)
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}Buat Akun Vmess Baru${NC}                 "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -rp "Password : " -e user
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+echo -e "              ${WB}★ Buat Akun Vmess Baru ★${NC}"
+echo -e "${BB}══════════════════════════════════════════════════════${NC}"
+read -rp "$(echo -e "${GB}➤ Masukkan Username / Password : ${NC}")" user
 CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/config.json | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "               ${WB}Buat Akun Vless Baru${NC}                 "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "${YB}Nama pengguna sudah terdaftar, silakan pilih nama lain.${NC}"
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
+echo -e "${RB}⚠️  Username '${user}' sudah terdaftar!${NC}"
+echo -e "${YB}Silakan coba dengan nama lain.${NC}"
+echo ""
+read -n 1 -s -r -p "Tekan tombol apa saja untuk mencoba lagi..."
 add-vmess
 fi
 done
@@ -149,40 +147,31 @@ ISP=$(cat /usr/local/etc/xray/org)
 CITY=$(cat /usr/local/etc/xray/city)
 systemctl restart xray
 clear
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "                 Informasi Akun Vmess                    " | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Remarks       : $user" | tee -a /user/log-vmess-$user.txt
-echo -e "ISP           : $ISP" | tee -a /user/log-vmess-$user.txt
-echo -e "City          : $CITY" | tee -a /user/log-vmess-$user.txt
-echo -e "Domain        : $domain" | tee -a /user/log-vmess-$user.txt
-echo -e "Wildcard      : (bug.com).$domain" | tee -a /user/log-vmess-$user.txt
-echo -e "Port TLS      : 443" | tee -a /user/log-vmess-$user.txt
-echo -e "Port NTLS     : 80" | tee -a /user/log-vmess-$user.txt
-echo -e "Port gRPC     : 443" | tee -a /user/log-vmess-$user.txt
-echo -e "Alt Port TLS  : 2053, 2083, 2087, 2096, 8443" | tee -a /user/log-vmess-$user.txt
-echo -e "Alt Port NTLS : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /user/log-vmess-$user.txt
-echo -e "id            : $user" | tee -a /user/log-vmess-$user.txt
-echo -e "AlterId       : 0" | tee -a /user/log-vmess-$user.txt
-echo -e "Security      : auto" | tee -a /user/log-vmess-$user.txt
-echo -e "Network       : Websocket" | tee -a /user/log-vmess-$user.txt
-echo -e "Path          : /(multipath) • ubah suka-suka" | tee -a /user/log-vmess-$user.txt
-echo -e "ServiceName   : vmess-grpc" | tee -a /user/log-vmess-$user.txt
-echo -e "Alpn          : h2, http/1.1" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Berakhir Pada : $exp" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Link TLS      : $vmesslink1" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Link NTLS     : $vmesslink2" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Link gRPC     : $vmesslink3" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
-echo -e "Format Clash  : http://$domain:8000/vmess/vmess-$user.txt" | tee -a /user/log-vmess-$user.txt
-echo -e "————————————————————————————————————————————————————${NC}" | tee -a /user/log-vmess-$user.txt
+echo -e "${CB}══════════════════════════════════════════════════════${NC}" | tee -a /user/log-vmess-$user.txt
+echo -e "                 ${WB}• Informasi Akun Vmess •${NC}" | tee -a /user/log-vmess-$user.txt
+echo -e "${CB}══════════════════════════════════════════════════════${NC}" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Remarks       :${NC} $user" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}ISP           :${NC} $ISP" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}City          :${NC} $CITY" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Domain        :${NC} $domain" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Wildcard      :${NC} (bug.com).$domain" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Port TLS      :${NC} 443" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Port NTLS     :${NC} 80" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}id            :${NC} $user" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}AlterId       :${NC} 0" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Security      :${NC} auto" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Network       :${NC} Websocket" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Path          :${NC} /(multipath) • ubah suka-suka" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}ServiceName   :${NC} vmess-grpc" | tee -a /user/log-vmess-$user.txt
+echo -e "${GB}Berakhir Pada :${NC} $exp" | tee -a /user/log-vmess-$user.txt
+echo -e "${CB}══════════════════════════════════════════════════════${NC}" | tee -a /user/log-vmess-$user.txt
+echo -e "${WB}🔗 Link TLS      :${NC} $vlesslink1" | tee -a /user/log-vmess-$user.txt
+echo -e "${WB}🔗 Link NTLS     :${NC} $vlesslink2" | tee -a /user/log-vmess-$user.txt
+echo -e "${WB}📄 Format Clash  :${NC} http://$domain:8000/vmess/vmess-$user.txt" | tee -a /user/log-vmess-$user.txt
+echo -e "${CB}══════════════════════════════════════════════════════${NC}" | tee -a /user/log-vmess-$user.txt
 echo " " | tee -a /user/log-vmess-$user.txt
 echo " " | tee -a /user/log-vmess-$user.txt
 echo " " | tee -a /user/log-vmess-$user.txt
-read -n 1 -s -r -p "Tekan tombol apa saja untuk kembali ke menu"
+read -n 1 -s -r -p "✅ Tekan tombol apa saja untuk kembali ke menu..."
 clear
 vmess
